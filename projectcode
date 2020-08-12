@@ -39,7 +39,7 @@ for page_name in pages_list:
     Global_list.append(local_list)
     
 # Search function that iterates through the list created early and identifies which image contains a face.    
-def search(text,folder):
+def find(text,folder):
     for local_list in Global_list:
         if text in local_list[1]:
             print('Results found in file',local_list[0])
@@ -69,7 +69,7 @@ def search(text,folder):
                         
                 display(contact_sheet)
             except:
-                print('But there were no faces in that file!')
+                print('No faces found')
                     
 #list that contains the images names
 pages_list=os.listdir('images')
